@@ -68,10 +68,10 @@ class Controller_WgmDisplayShortcutAjax extends DevblocksControllerExtension {
 			exit;
 		
 		// Team/Category
-		if(!empty($bucket)) {
+		if(!empty($move_bucket)) {
             list($group_id, $bucket_id) = CerberusApplication::translateGroupBucketCode($move_bucket);
             
-			if(!empty($group_id)) {
+            if(!empty($group_id)) {
                 $fields[DAO_Ticket::GROUP_ID] = $group_id;
                 $fields[DAO_Ticket::BUCKET_ID] = $bucket_id;
 			    DAO_Ticket::update($ticket_id, $fields);
