@@ -59,7 +59,7 @@ class Controller_WgmDisplayShortcutAjax extends DevblocksControllerExtension {
 	
 	function saveDisplayMoveToAction() {
 		@$ticket_id = DevblocksPlatform::importGPC($_REQUEST['ticket_id'],'integer');
-		@$bucket = DevblocksPlatform::importGPC($_REQUEST['wgm_moveto'],'string','');
+		@$move_bucket = DevblocksPlatform::importGPC($_REQUEST['wgm_moveto'],'string','');
 		
 		$groups = DAO_Group::getAll();
 		$buckets = DAO_Bucket::getAll();
